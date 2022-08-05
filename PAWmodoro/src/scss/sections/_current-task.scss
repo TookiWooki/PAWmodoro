@@ -1,0 +1,27 @@
+@import "../core/color";
+
+.current-task {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 40px;
+    // background-color: $white-opacity-10;
+    // border-top: 2px solid $white-opacity-15;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.current-task--number{
+    color: rgba(245, 245, 245, 0.9);
+    padding-right: 16px;
+    font-size: 20px;
+}
+
+.current-task--text{
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+}

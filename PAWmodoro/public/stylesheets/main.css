@@ -1,0 +1,1019 @@
+.flex-horizontal-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mr-5 {
+  margin-right: 5;
+}
+
+.mr-10 {
+  margin-right: 10;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.sm-info {
+  font-size: 14px;
+  color: rgba(112, 111, 111, 0.9);
+}
+
+.sm-info-12 {
+  font-size: 12px;
+  color: rgba(112, 111, 111, 0.9);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.max-ch-60 {
+  width: 62ch;
+  line-height: 1.4;
+}
+
+#nonfunctional {
+  opacity: 0.4;
+  cursor: auto;
+}
+
+.gray-text {
+  color: rgba(112, 111, 111, 0.9);
+}
+.gray-text .fa-edit:hover {
+  color: whitesmoke;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.button--primary {
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0px 8px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border-radius: 8px;
+  font-family: "Red Hat Display", sans-serif;
+}
+.button--primary:hover {
+  opacity: 1;
+}
+
+.button--primary-dark {
+  color: #242424;
+  background-color: rgba(36, 36, 36, 0.1);
+  padding: 8px 8px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 8px;
+}
+.button--primary-dark:hover {
+  opacity: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown--content {
+  display: none;
+  position: absolute;
+  right: 0%;
+  margin-top: 4px;
+  background-color: whitesmoke;
+  min-width: 220px;
+  overflow: auto;
+  box-shadow: 0px 4px 8px 0px rgba(36, 36, 36, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown--item {
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+  padding: 4px 8px;
+  margin: 2px 0px;
+  cursor: pointer;
+  display: block;
+}
+.dropdown--item a {
+  color: rgba(36, 36, 36, 0.9);
+  text-decoration: none;
+}
+.dropdown--item:hover {
+  background-color: rgba(236, 90, 64, 0.2);
+}
+.dropdown--item:last-child {
+  margin-top: 4px;
+  border-top: 1px solid rgba(236, 90, 64, 0.2);
+}
+
+.task--dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown--content-task {
+  display: none;
+  position: absolute;
+  right: 0%;
+  margin-top: 4px;
+  background-color: whitesmoke;
+  min-width: 180px;
+  overflow: auto;
+  box-shadow: 0px 4px 8px 0px rgba(36, 36, 36, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown--item-task {
+  font-size: 14px;
+  padding: 8px 8px;
+  margin: 2px 0px;
+  cursor: pointer;
+  display: block;
+}
+.dropdown--item-task a {
+  color: rgba(36, 36, 36, 0.9);
+  text-decoration: none;
+  font-family: "Red Hat Text", sans-serif;
+  padding: 4px 8px;
+}
+.dropdown--item-task:hover {
+  background-color: rgba(236, 90, 64, 0.2);
+}
+.dropdown--item-task:last-child {
+  margin-top: 4px;
+  border-top: 1px solid rgba(236, 90, 64, 0.2);
+}
+
+.show {
+  display: block;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: tomato;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px tomato;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+Reset Browser Styles * {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+body {
+  margin-top: 0px;
+  margin-left: 0px;
+  background-color: rgba(36, 36, 36, 0.9);
+  opacity: 1;
+}
+body p {
+  cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.current-task {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.current-task--number {
+  color: rgba(245, 245, 245, 0.9);
+  padding-right: 16px;
+  font-size: 20px;
+}
+
+.current-task--text {
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: whitesmoke;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footer a {
+  text-decoration: underline;
+  color: rgba(112, 111, 111, 0.9);
+}
+.footer p {
+  max-width: 42ch;
+}
+.footer .fa-js-square, .footer .fa-html5, .footer .fa-sass {
+  font-size: 40px;
+  margin-right: 20px;
+  color: rgba(112, 111, 111, 0.9);
+}
+
+.bg-fill-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(26, 26, 26, 0.9);
+  padding-top: 5px;
+  padding-bottom: 40px;
+}
+
+.header--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 480px;
+  padding-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 0.8em;
+  margin-top: 10px;
+}
+
+.header--logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  color: whitesmoke;
+  background: linear-gradient(90deg, #f72585, #4895ef);
+  border-radius: 8px;
+  padding: 0px 8px;
+}
+.header--logo img {
+  width: 22px;
+  height: 22px;
+}
+.header--logo p {
+  font-size: 14px;
+  font-weight: 600;
+  color: whitesmoke;
+  margin-left: 4px;
+  line-height: 0em;
+}
+
+.header--items-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header--item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+.header--item img {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+.header--item p {
+  font-size: 12px;
+  font-weight: 600;
+  color: whitesmoke;
+  margin-left: 8px;
+  line-height: 4px;
+  pointer-events: none;
+}
+.header--item:last-child {
+  margin-right: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+
+.accordion-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(36, 36, 36, 0.9);
+  padding: 0px 10px;
+  width: 300px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.accordion-btn p {
+  color: #4895ef;
+  font-weight: 600;
+  pointer-events: none;
+}
+.accordion-btn:first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.panel {
+  background-color: rgba(36, 36, 36, 0.9);
+  color: whitesmoke;
+  width: 300px;
+  padding: 0px 10px;
+  display: none;
+  overflow: hidden;
+  padding-bottom: 20px;
+  line-height: 1.4em;
+  font-size: 14px;
+}
+.panel h4 {
+  margin-block-end: 0.5em;
+}
+.panel:last-child {
+  border-radius: 0px 0px 8px 8px;
+}
+.panel input::-webkit-inner-spin-button {
+  font-size: 10px;
+}
+
+.panel-information p {
+  padding: 8px 8px;
+}
+
+.panel--editable-content {
+  padding: 4px 8px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.panel--content-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel--content-style input {
+  width: 60px;
+  height: 30px;
+  font-size: 16px;
+  padding-left: 10px;
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 0px;
+  border-radius: 8px;
+  outline: rgba(36, 36, 36, 0.9);
+  transition: all 0.2s ease-out;
+}
+.panel--content-style input:focus {
+  background-color: tomato;
+}
+
+.panel--edit-box {
+  height: 250px;
+  overflow: scroll;
+  padding: 4px;
+  margin-block-start: 0px;
+  margin-block-end: 4px;
+  font-family: "Red Hat Text", sans-serif;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px rgba(112, 111, 111, 0.1);
+  font-size: 14px;
+  background-color: transparent;
+  border: 0px;
+  resize: none;
+  color: whitesmoke;
+}
+.panel--edit-box li:before {
+  content: url("../../../images/screenshot_paw_12.png");
+  width: 12px;
+  height: 12px;
+  padding-right: 4px;
+}
+.panel--edit-box h3 {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.3em;
+  color: rgba(112, 111, 111, 0.9);
+}
+.panel--edit-box ul {
+  margin-block-start: 0.3em;
+  margin-block-end: 0.4em;
+}
+.panel--edit-box:focus {
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px rgba(112, 111, 111, 0.9);
+  outline: none;
+  transition: all 0.1s ease;
+}
+.panel--edit-box b {
+  font-weight: 800;
+}
+
+.edit-box--menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-block-start: 0px;
+  margin-block-end: 8px;
+}
+.edit-box--menu button {
+  margin-block-start: 0px;
+  margin-block-end: 4px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: whitesmoke;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 6px 12px;
+  width: 100%;
+  margin: 0px 4px;
+  text-align: center;
+  border: 0px;
+}
+.edit-box--menu button:first-child {
+  margin-left: 0px;
+}
+.edit-box--menu button:last-child {
+  margin-right: 0px;
+}
+.edit-box--menu button:hover {
+  background-color: #4895ef;
+}
+
+.edit-box--button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: whitesmoke;
+  border: 0px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+.edit-box--button p {
+  margin-block-start: 6px;
+  margin-block-end: 6px;
+  margin-left: 5px;
+  font-size: 14px;
+  pointer-events: none;
+}
+.edit-box--button:hover {
+  background-color: #4895ef;
+}
+.edit-box--button:active {
+  background-color: #f72585;
+}
+
+.edit-box--button-active {
+  background-color: #4895ef;
+}
+
+.active, .accordion-btn:hover {
+  background: linear-gradient(90deg, #f72585, #4895ef);
+}
+.active p, .active .fa-question, .active .fa-stopwatch, .active .fa-bolt, .active .fa-sticky-note, .active .fa-save, .accordion-btn:hover p, .accordion-btn:hover .fa-question, .accordion-btn:hover .fa-stopwatch, .accordion-btn:hover .fa-bolt, .accordion-btn:hover .fa-sticky-note, .accordion-btn:hover .fa-save {
+  color: rgba(36, 36, 36, 0.9);
+  font-weight: 600px;
+}
+
+.fa-question, .fa-stopwatch, .fa-bolt, .fa-sticky-note, .fa-save {
+  color: #4895ef;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.task-list {
+  display: grid;
+  flex-direction: column;
+}
+
+.task-list--input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.task-list--input input {
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid whitesmoke;
+  padding: 10px;
+  height: 40px;
+  background-color: whitesmoke;
+}
+.task-list--input input:focus {
+  outline: none;
+}
+.task-list--input .task-list--addBtn {
+  padding: 11px 12px;
+  border-radius: 8px;
+  font-family: "Red Hat Display", sans-serif;
+  color: whitesmoke;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: all 0.2s ease;
+  background-color: rgba(36, 36, 36, 0.9);
+  margin-left: 10px;
+}
+.task-list--input .task-list--addBtn:hover {
+  color: #4895ef;
+  background: rgba(72, 149, 239, 0.05);
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(36, 36, 36, 0.9);
+  padding: 8px 10px;
+  color: whitesmoke;
+  font-family: "Red Hat Text", sans-serif;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.task:first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+.task:last-child {
+  border-radius: 0px 0px 8px 8px;
+}
+.task .fa-paw {
+  color: rgba(112, 111, 111, 0.9);
+  font-size: 20px;
+}
+
+.task li {
+  list-style: none;
+  flex: 1;
+}
+
+.task input {
+  margin-top: 5px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.task-list--task-badge {
+  display: inline-block;
+  padding: 10px;
+  color: rgba(36, 36, 36, 0.9);
+  font-size: 18px;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.task-list--task-edit {
+  padding: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+.task-list--task-edit:hover {
+  color: #4895ef;
+  background: rgba(72, 149, 239, 0.05);
+  border-radius: 8px;
+}
+
+.task-list--task-check {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+}
+.task-list--task-check:hover {
+  color: #f72585;
+  background: rgba(247, 37, 133, 0.05);
+  border-radius: 8px;
+}
+
+.task-list--task-delete {
+  padding: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+.task-list--task-delete:hover {
+  color: tomato;
+  background: rgba(255, 99, 71, 0.05);
+  border-radius: 8px;
+}
+
+.fa-trash {
+  pointer-events: none;
+}
+.fa-trash:hover {
+  color: tomato;
+}
+
+.fa-check {
+  pointer-events: none;
+}
+
+.fa-pencil-alt {
+  pointer-events: none;
+}
+
+.completed {
+  opacity: 0.5;
+}
+.completed .task-list--task-check {
+  color: rgba(247, 37, 133, 0.5);
+}
+
+.completed li {
+  text-decoration: line-through;
+}
+
+.delete-animation {
+  z-index: -1;
+  transform: translatex(160%);
+  opacity: 0;
+}
+
+.white50 {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.timer--pomodoro {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  border-radius: 8px 8px 0px 0px;
+  padding: 0px 40px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.timer--pomodoro img {
+  z-index: 1;
+  position: absolute;
+  margin-top: 16px;
+}
+
+.timer--pomodoro-filler {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 400px;
+  background-color: rgba(36, 36, 36, 0.9);
+  padding: 0px 20px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 0em;
+  left: 1.3em;
+  height: 300px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.timer--instruction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 0em;
+  padding-top: 10px;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+
+.timer--instruction-fade p {
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.timer--on-options {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 34px;
+}
+.timer--on-options i {
+  margin-right: 5px;
+}
+.timer--on-options .timer--option {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 4px 6px;
+  line-height: 0em;
+  border-radius: 8px;
+  padding-top: 10px;
+  transition: all 0.1s ease;
+}
+.timer--on-options .timer--option:first-child {
+  margin-right: 10px;
+}
+.timer--on-options .timer--option:hover {
+  color: whitesmoke;
+  cursor: pointer;
+}
+.timer--on-options .timer--option:hover p {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.timer--tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  z-index: 2;
+}
+
+.timer--tab-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Red Hat Text", sans-serif;
+  margin-block-end: 0em;
+  margin-block-start: 0em;
+  background: linear-gradient(90deg, #f72585, #4895ef);
+  border-radius: 8px;
+  padding: 4px 24px;
+}
+
+.timer--tab-active-mr0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Red Hat Text", sans-serif;
+  background: linear-gradient(90deg, #f72585, #4895ef);
+  margin-block-end: 0em;
+  margin-block-start: 0em;
+  background-color: tomato;
+  border-radius: 8px;
+  padding: 8px 24px;
+}
+
+.timer--countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 800;
+  color: whitesmoke;
+  text-shadow: 1px 4px rgba(255, 255, 255, 0.15);
+  line-height: 0em;
+  z-index: 2;
+  margin-top: 50px;
+}
+.timer--countdown p {
+  font-family: "Lato", monospace;
+}
+.timer--countdown .timer--seperator {
+  margin-right: 5px;
+}
+
+.timer--tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Red Hat Text", sans-serif;
+  margin-block-end: 0em;
+  margin-block-start: 0em;
+  border-radius: 8px;
+  padding: 6px 24px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.timer--tab:last-child {
+  margin-right: 0px;
+}
+.timer--tab p {
+  pointer-events: none;
+}
+
+#focus-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#longbreak-btn:hover, #shortbreak-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.timer--break-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.timer--break-container .break--text {
+  color: whitesmoke;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.timer--break-container .timer--break-tab {
+  padding: 8px 24px;
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px 0px 0px 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-block-end: 0em;
+  margin-block-start: 0em;
+}
+.timer--break-container .timer--break-tab p {
+  pointer-events: none;
+}
+.timer--break-container .timer--break-tab:last-child {
+  border-radius: 0px 8px 8px 0px;
+}
+
+/*# sourceMappingURL=main.css.map */

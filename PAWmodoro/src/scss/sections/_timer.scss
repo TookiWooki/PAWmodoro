@@ -1,0 +1,253 @@
+@import "../core/color";
+@import "../core/typography";
+
+.timer--pomodoro{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    // background-color: $white-opacity-10;
+    border-radius: 8px 8px 0px 0px;
+    padding: 0px 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        z-index: 1;
+        position: absolute;
+        margin-top: 16px;
+    }
+}
+
+//Filler div on countdown
+.timer--pomodoro-filler{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 400px;
+    background-color: $dark-gray;
+    padding: 0px 20px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute; 
+    top: 0em; 
+    left: 1.3em;
+    height: 300px; 
+    // opacity: 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.timer--instruction {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // background-color: $white-opacity-10;
+    font-size: 12px;
+    color: $white-opacity-50;
+    line-height: 0em;
+    padding-top: 10px;
+    transition: all 0.2s ease;
+    opacity: 1;
+}
+
+.timer--instruction-fade{
+    p{
+        transition: all 0.2s ease;
+        opacity: 0;
+    }
+}
+
+.timer--on-options {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    // background-color: $white-opacity-10;
+    height: 34px;
+    i {
+        margin-right: 5px;
+    }
+
+    .timer--option {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: $white-opacity-50;
+        padding: 4px 6px;
+        line-height: 0em;
+        border-radius: 8px;
+        padding-top: 10px;
+        transition: all 0.1s ease;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+    
+        &:hover {
+            color: whitesmoke;
+            cursor: pointer;
+            p {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+.timer--tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    // background-color: $white-opacity-10;
+    padding: 10px;
+    z-index: 2;
+}
+
+.timer--tab-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: $font-body;
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    background: $gradient-primary;
+    border-radius: 8px;
+    padding: 4px 24px;
+}
+
+.timer--tab-active-mr0 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: $font-body;
+    background: $gradient-primary;
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    background-color: tomato;
+    border-radius: 8px;
+    padding: 8px 24px;
+}
+
+.timer--countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 800;
+    color: whitesmoke;
+    text-shadow: 1px 4px $white-opacity-15;
+    line-height: 0em;
+    z-index: 2;
+    margin-top: 50px;
+
+    p {
+        font-family: $font-timer;
+        // font-variant-numeric: tabular-nums;
+    }
+
+    .timer--seperator {
+        margin-right: 5px;
+    }
+}
+
+.timer--tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $font-body;
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    border-radius: 8px;
+    padding: 6px 24px;
+    background-color: $white-opacity-5;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    p {
+        pointer-events: none;
+    }
+}
+
+#focus-btn {
+
+    &:hover {
+        background-color: $white-opacity-15
+    }
+}
+
+#longbreak-btn, #shortbreak-btn {
+
+    &:hover {
+        background-color: $white-opacity-15;
+    }
+}
+
+
+.timer--break-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .break--text {
+        color: whitesmoke;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .timer--break-tab {
+        padding: 8px 24px;
+        color: whitesmoke;
+        background-color: $white-opacity-5;
+        border-radius: 8px 0px 0px 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        margin-block-end: 0em;
+        margin-block-start: 0em;
+
+        p {
+            pointer-events: none;
+        }
+
+        &:last-child {
+            border-radius: 0px 8px 8px 0px;
+        }
+    }
+}
+
+
+
+
+
+//FEATURE: when the user clicks start, the .timer--pomodoro gets a white boarder that acts as a progress bar for the remaining time

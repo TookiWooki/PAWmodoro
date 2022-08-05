@@ -1,0 +1,257 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/stylesheets/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&Questrial&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Pomodoro Timer Online - Pawmodoro</title>
+</head>
+<body>
+    <div class="bg-fill-container">
+            <section class="header--container">
+                <div class="header--logo">
+                    <!-- <img src="./images/icons8-verified-account-50.png"> -->
+                    <i class="fas fa-paw"></i>
+                    <p>Pawmodoro</p>
+                </div>
+                <div class="header--items-container">
+                    <div class="header--item button--primary">
+                        <!-- <img src="images/icons8-share-50.png" alt="share link"> -->
+                        <i class="fas fa-share"></i>
+                        <p>Share</p>
+                    </div>
+                    <div id="nonfunctional" class="header--item button--primary">
+                    <!-- Dark Mode -->
+                        <!-- <i class="far fa-moon"></i> -->
+                    <!-- Light Mode -->
+                        <i class="fas fa-moon"></i>
+                        <p>Theme</p>
+                    </div>
+                    <div id="nonfunctional" class="header--item button--primary">
+                        <img src="images/icons8-cat-profile-50.png" alt="profile icon">
+                        <p>Login</p>
+                    </div>
+                </div>
+            </section>
+        <div style="display: flex; justify-content: center;">
+            <!-- LEFT CONTAINER -->
+            <section class="accordion-container mr-40">
+                <!-- How It Works -->
+                <div class="accordion-btn">
+                    <p>How It Works</p>
+                    <i class="fas fa-question"></i>
+                </div>
+                <div class="panel">
+                    <p class="panel--information mb-20">The Pomodoro technique is a method to <i>increase your focus</i> on work and tasks within in a certain timeframe, traditionally 25 minutes in length, rewarded by short breaks.</p>
+                    <p class="panel--information mb-20">These 25 minute intervals  of focus are usually done in groups of 3-4, including short breaks in-between, with a long break to watch funny cat videos after the final interval. </p>
+                    <p class="panel--information sm-info">Use Quick Setup to customize your session.</p>
+                </div>
+                <!-- Quick Setup -->
+                <div class="accordion-btn">
+                    <p>Timer Setup</p>
+                    <i class="fas fa-stopwatch"></i>
+                </div>
+                <div class="panel panel--information">
+                <!-- Usage Profiles - to be setup once I get user accounts working -->
+                    <!-- <div style="display: flex; flex-direction: row; align-items: center; justify-content: start;">
+                        <h4 class="gray-text" style="margin-right: 10px;">Profiles</h4>
+                        <i id="profile--edit-btn" class="fas fa-edit gray-text" style="margin-block-end: 0.5em; margin-block-start: 1.2em;"></i>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: start; align-items: center;">
+                        <div id="profile--study" class="edit-box--button" style="margin-right: 8px; padding: 0px 12px;">
+                            <p style="font-size: 14px; margin-left: 0px; line-height: 1em; pointer-events: none;">Study</p>
+                        </div>
+                        <div id="profile--coding" class="edit-box--button" style="margin-right: 8px; font-size: 14px; padding: 0px 12px;">
+                            <p style="font-size: 14px; margin-left: 0px; line-height: 1em; pointer-events: none;">Coding</p>
+                        </div>
+                        <div id="profile--research" class="edit-box--button" style="margin-right: 8px; font-size: 14px; padding: 0px 12px;">
+                            <p style="font-size: 14px; margin-left: 0px; line-height: 1em; pointer-events: none;">Research</p>
+                        </div>
+                        <div id="profile--work" class="edit-box--button" style="margin-right: 8px; font-size: 14px; padding: 0px 12px;">
+                            <p style="font-size: 14px; margin-left: 0px; line-height: 1em; pointer-events: none;">Work</p>
+                        </div>
+                        <div id="profile--writing" class="edit-box--button" style="margin-right: 8px; font-size: 14px; padding: 0px 12px;">
+                            <p style="font-size: 14px; margin-left: 0px; line-height: 1em; pointer-events: none;">Writing</p>
+                        </div>
+                        <div id="profile--add" class="edit-box--button" style="margin-right: 8px; font-size: 14px; padding: 0px 12px;">
+                            <i class="fas fa-plus-square" style="padding:6px 0px; pointer-events: none;"></i>
+                        </div>
+                    </div> -->
+                    <h4 class="gray-text">Time (minutes)</h4>
+                    <div class="panel--editable-content mb-20">
+                        <div class="panel--content-style">
+                            <p>Focus Interval</p>
+                            <input id="settings--focus-time" type="text" pattern="\d*" maxlength="3" value="25">
+                        </div>
+                        <div class="panel--content-style">
+                            <p>Short Break</p>
+                            <input id="settings--short-time" type="text" pattern="\d*" maxlength="3" value="5">
+                        </div>
+                        <div class="panel--content-style">
+                            <p>Long Break</p>
+                            <input id="settings--long-time" type="text" pattern="\d*" maxlength="3" value="15">
+                        </div>
+                        <p class="sm-info-12">After editing values, reselect to update the timer.</p>
+                    </div>
+                    <div class="panel--content-style mb-20">
+                        <p class="panel--editable-content">Intervals before Long Break</p>
+                        <input id="settings--long-interval" type="text" pattern="\d*" maxlength="2" value="4">
+                    </div>
+                    <div class="panel--content-style mb-20">
+                        <p class="panel--editable-content">Auto-start Breaks</p>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <!-- Session Stats -->
+                    <!-- local storage until firebase is figured out -->
+                <div class="accordion-btn">
+                    <p>Session Stats</p>
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="panel">
+                    <div class="panel--content-style mb-20" style="margin-top: 20px;">
+                        <p style="margin-block-start: 0em; margin-block-end: 0em;">Total Session Time</p>
+                        <p id="stat--total-time" class="panel--editable-content" style="color: #f72585;">2hrs 13min</p>
+                    </div>
+                    <div class="panel--content-style mb-20">
+                        <p style="margin-block-start: 0em; margin-block-end: 0em;">Tasks Completed</p>
+                        <p id="stat--tasks-complete" class="panel--editable-content" style="color: #f72585;">14</p>
+                    </div>
+                    <div class="panel--content-style mb-20">
+                        <p style="margin-block-start: 0em; margin-block-end: 0em;">Average Time on Tasks</p>
+                        <p id="stat--time-average" class="panel--editable-content" style="color: #f72585;">8min 43sec</p>
+                    </div>
+                    <div class="panel--content-style mb-20">
+                        <p style="margin-block-start: 0em; margin-block-end: 0em;">Paw Points Collected</p>
+                        <div class="panel--editable-content" style="display: flex; flex-direction: row; align-items: center;">
+                            <i class="fas fa-paw" style="color: #f72585; margin-right: 5px;"></i>
+                            <p  id="stat--paw-points" style="color: #f72585; margin-block-start: 0em; margin-block-end: 0em;">850</p>
+                        </div>
+                    </div>
+                    <p class="panel--information sm-info" style="text-decoration: underline; cursor: pointer;">reset session stats</p>
+                </div>
+            </section>
+            <!-- POMODORO TIMER AND TASKS -->
+            <div style="display: flex; flex-direction: column;">
+                <section style="position: relative;">
+                    <div class="timer--pomodoro">
+                        <div class="timer--countdown">
+                            <p class="timer--minutes">25</p>
+                            <p class="timer--seperator">:</p>
+                            <p class="timer--seconds">00</p>
+                        </div>
+                        <img style="width: 280px;" src="/images/Large_Paw.png" alt="large paw and toe beans">
+                    </div>
+                    <div id="filler" class="timer--pomodoro-filler"></div>
+                    <div class="timer--instruction">
+                        <p>Select below to start the timer</p>
+                    </div>
+                    <div class="timer--on-options">
+                        <div id="timer-pause" class="timer--option">
+                            <i id="timer-pause-btn" class="fas fa-pause"></i>
+                            <i style="display: none;" id="timer-play-btn" class="fas fa-play"></i>
+                            <p id="timer-pause-text">Pause</p>
+                        </div>
+                        <div id="timer-reset" class="timer--option">
+                            <i class="fas fa-sync-alt"></i>
+                            <p>Reset</p>
+                        </div>
+                    </div>
+                    <div class="timer--tabs">
+                        <p id="focus-btn" class="timer--tab timer--focus">Focus</p>
+                        <div class="timer--break-container">
+                            <p class="break--text">Break for</p>
+                            <p id="shortbreak-btn" class="timer--break-tab">Short Break</p>
+                            <p id="longbreak-btn" class="timer--break-tab">Long Break</p>
+                        </div>
+                    </div>
+                    <div class="current-task">
+                        <i class="fas fa-check current-task--number"></i>
+                        <p class="current-task--text white50">Your current task will display here.</p>
+                    </div>
+                <!-- Task List -->
+                </section>
+                <section class="task-list">
+                    <form autocomplete="off">
+                        <div class="task-list--input">
+                            <input type="text" class="task-input" autocomplete="off" placeholder="Add tasks to divide and conquer..">
+                            <span onclick="addTask()" id="task-button" class="task-list--addBtn task-button">Add</span>
+                        </div>
+                        <ul class="task-list-ul"></ul>
+                    </form>
+                </section>
+            </div>
+            <!-- RIGHT CONTAINER -->
+            <section class="accordion-container ml-40">
+                 <!-- Notepad -->
+                <div class="accordion-btn">
+                    <p>Notepad</p>
+                    <i class="fas fa-sticky-note"></i>
+                </div>
+                <div class="panel" >
+                    <p class="panel-information sm-info" style="margin-block-end: 8px;">Where ideas simplify into feasible tasks.</p>
+                    <div class="edit-box--menu">
+                            <button onclick="heading()"> <i class="fas fa-heading"></i> </button>
+                            <button onclick="format('insertunorderedlist')"> <i class="fas fa-list-ul"></i> </button>
+                            <button onclick="format('bold')"> <i class="fas fa-bold"></i></button>
+                            <button onclick="format('italic')"> <i class="fas fa-italic"></i> </button>
+                            <button onclick="format('underline')"> <i class="fas fa-underline"></i> </button>
+                    </div>
+                    <div id="panel--edit-box" class="panel--edit-box" contenteditable="true"></div>
+                    <div style="display: flex; flex-direction: row; justify-content:space-between; margin-bottom: 10px;">
+                        <div class="edit-box--button" onclick="format('undo')">
+                            <i class="fas fa-undo"></i>
+                            <p>Undo</p>
+                        </div>
+                        <div class="edit-box--button" onclick= "document.getElementsByClassName('panel--edit-box')[0].innerHTML='';">
+                            <i class="fas fa-eraser"></i>
+                            <p>Clear Notepad</p>
+                        </div>
+                        <div class="edit-box--button" onclick="format('redo')">
+                            <i class="fas fa-redo"></i>
+                            <p>Redo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Saving -->
+                <div class="accordion-btn">
+                        <p>Saving</p>
+                        <i class="fas fa-save"></i>
+                </div>
+                <div class="panel">
+                        <p class="panel--information mb-20">Tasks, Notepad notes, and Settings on Pawmodoro are saved on local storage; meaning that when your browser window is closed, the application data will be cleared. </p>
+                        <p class="panel--information mb-20">Login functionality with saving capabilities based on your personal user account is on the top of my to do list! </p>
+                        <p class="panel--information sm-info">I’m thankful for your support and understanding.</p>
+                </div>
+            </section>
+        </div>       
+    </div>
+    <footer class="footer">
+        <div class="flex-horizontal-align">
+            <i class="fas fa-paw mr-5"></i>
+            <p class="sm-text">Pawmodoro by <a href="https://github.com/TookiWooki" target="_blank" alt="TookiWooki Github">TookiWooki</a></h6>
+        </div>
+        <div>
+            <p class="sm-info max-ch-60 text-center">Pawmodoro is purely a learning project with the goal of understanding what makes a good project, the importance of structure as the project grows, and what Javascript can do.<br>I will continue to improve on Pawmodoro as I learn.</p>
+        </div>
+        <div class="flex-horizontal-align">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-sass"></i>
+            <i class="fab fa-js-square"></i>
+        </div>
+
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/components/accordion.js"></script>
+    <script src="./js/components/notepad.js"></script>
+    <script src="./js/components/taskList.js"></script>
+    <script src="./js/components/timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@import "../core/color";
+@import "../core/typography";
+ 
+//Task Header Dropdown
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown--content {
+    display: none;
+    position: absolute;
+    right: 0%;
+    margin-top: 4px;
+    background-color: whitesmoke;
+    min-width: 220px;
+    overflow: auto;
+    box-shadow: 0px 4px 8px 0px rgba(36, 36, 36, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+  }
+
+  .dropdown--item {
+    font-size: 14px;
+    font-family: $font-body;
+    padding: 4px 8px;
+    margin: 2px 0px;
+    cursor: pointer;
+    display: block;
+
+    a {    
+        color: $dark-gray;
+        text-decoration: none;
+    }
+
+    //$tomato-darker
+    &:hover {
+        background-color: rgba(236, 90, 64, 0.2);
+    }
+
+
+    &:last-child {
+        margin-top: 4px;
+        border-top: 1px solid rgba(236, 90, 64, 0.2);
+    }
+  }
+
+
+//Task Item Dropdown
+  .task--dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown--content-task {
+    display: none;
+    position: absolute;
+    right: 0%;
+    margin-top: 4px;
+    background-color: whitesmoke;
+    min-width: 180px;
+    overflow: auto;
+    box-shadow: 0px 4px 8px 0px rgba(36, 36, 36, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+  }
+  
+  .dropdown--item-task {
+    font-size: 14px;
+    // font-family: $font-body;
+    padding: 8px 8px;
+    margin: 2px 0px;
+    cursor: pointer;
+    display: block;
+
+    a {    
+        color: $dark-gray;
+        text-decoration: none;
+        font-family: $font-body;
+        padding: 4px 8px;
+    }
+
+    //$tomato-darker
+    &:hover {
+        background-color: rgba(236, 90, 64, 0.2);
+    }
+
+
+    &:last-child {
+        margin-top: 4px;
+        border-top: 1px solid rgba(236, 90, 64, 0.2);
+    }
+  }
+
+
+
+//Show the dropdown when dropbtn is clicked
+  .show {display: block;}
+  

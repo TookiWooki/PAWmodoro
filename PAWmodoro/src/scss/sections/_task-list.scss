@@ -1,0 +1,211 @@
+@import "../core/color";
+@import "../core/typography";
+
+//Overarching container of task header and tasks
+.task-list {
+    display: grid;
+    flex-direction: column;
+}
+
+//Input box to write task
+.task-list--input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    // background-color: $white-opacity-10;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    // padding: 10px 40px;
+    margin-top: 15px;
+
+    input {
+        width: 100%;
+        font-size: 14px;
+        border-radius: 8px;
+        border: 1px solid whitesmoke;
+        padding: 10px;
+        height: 40px;
+        background-color: whitesmoke;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+//Add task button    
+    .task-list--addBtn {
+        padding: 11px 12px;
+        // border: 1px solid whitesmoke;
+        border-radius: 8px;
+        font-family: $font-heading;
+        color: whitesmoke;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 800;
+        transition: all 0.2s ease;
+        background-color: $dark-gray;
+        margin-left: 10px;
+
+        &:hover {
+            color: $gradient-blue;
+            background: rgba($color: #4895ef, $alpha: 0.05);
+        }
+    }
+}
+
+//remove browser ul styling
+ul {
+    padding-inline-start: 0px;
+}
+
+//Task styling
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $dark-gray;
+    // border-radius: 8px;
+    padding: 8px 10px;
+    color: whitesmoke;
+    font-family: $font-body;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    line-height: 1.5em;
+
+    &:first-child{
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    &:last-child {
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    .fa-paw {
+        color: $gray;
+        font-size: 20px;
+    }
+}
+
+
+//remove list dots and push buttons to right
+.task li{
+    list-style: none;
+    flex: 1;
+
+
+}
+
+.task input {
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+
+
+.task-list--task-badge{
+    display: inline-block;
+    padding: 10px;
+    color: $dark-gray;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+//Edit button on individual task
+.task-list--task-edit {
+    padding: 8px;
+    cursor: pointer;
+    color: $white-opacity-50;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        color: $gradient-blue;
+        background: rgba($color: #4895ef, $alpha: 0.05);
+        border-radius: 8px;
+    }
+}
+
+//Complete button on individual task
+.task-list--task-check {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: $white-opacity-50;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        color: $gradient-pink;
+        background: rgba($color: #f72585, $alpha: 0.05);
+        border-radius: 8px;
+    }
+}
+
+//Delete button on individual task
+.task-list--task-delete {
+    padding: 8px;
+    cursor: pointer;
+    color: $white-opacity-50;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        color: tomato;
+        background: rgba($color: #ff6347, $alpha: 0.05);
+        border-radius: 8px;
+    }
+}
+
+//be able to click through the icons to the button area incl. padding
+.fa-trash {
+    pointer-events: none;
+
+    &:hover {
+        color: tomato;
+    }
+}
+
+.fa-check {
+    pointer-events: none;
+}
+
+.fa-pencil-alt {
+    pointer-events: none;
+}
+
+//Completed task styling
+.completed {
+    opacity: 0.5;
+    
+    .task-list--task-check {
+        color: rgba($color: #f72585, $alpha: 0.5);
+    }
+}
+
+//Strikethrough the completed task text - not the icons
+.completed li{
+    text-decoration: line-through;
+}
+
+//Animation on task deletion
+.delete-animation {
+    z-index: -1;
+    transform: translatex(160%);
+    opacity: 0;
+
+}
+
+.white50 {
+    color: $white-opacity-50;
+    font-weight: 600;
+}

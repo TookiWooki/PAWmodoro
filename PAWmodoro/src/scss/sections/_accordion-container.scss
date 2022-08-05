@@ -1,0 +1,245 @@
+@import "../core/color";
+@import "../core/typography";
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.accordion-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark-gray;
+    padding: 0px 10px;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    p {
+        color: $gradient-blue;
+        font-weight: 600;
+        pointer-events: none;
+    }
+
+    &:first-child {
+        border-radius: 8px 8px 0px 0px;
+    }
+}
+
+
+.panel {
+    background-color: $dark-gray;
+    color: whitesmoke;
+    width: 300px;
+    padding: 0px 10px;
+    display: none;
+    overflow: hidden;
+    padding-bottom: 20px;
+    line-height: 1.4em;
+    font-size: 14px;
+    
+    h4 {
+        margin-block-end: 0.5em;
+    }
+
+    &:last-child {
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    input::-webkit-inner-spin-button {
+        font-size: 10px;
+    }
+}
+
+//Informational Content
+.panel-information {
+
+    p {
+        padding: 8px 8px;
+    }
+}
+
+//Editable Content
+.panel--editable-content {
+    padding: 4px 8px;
+    border: 2px solid $white-opacity-5;        
+    border-radius: 8px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+//Bottom Margin for sections of the panel"
+.mb-20{
+    margin-bottom: 20px;
+}
+
+//Content Style - flex horizontal
+.panel--content-style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    input {
+        width: 60px;
+        height: 30px;
+        font-size: 16px;
+        padding-left: 10px;
+        color: whitesmoke;
+        background-color: $white-opacity-5;
+        border: 0px;
+        border-radius: 8px;
+        outline: $dark-gray;
+        transition: all 0.2s ease-out;
+    }
+
+    input:focus {
+        background-color: tomato;
+    }
+}
+
+////////  NOTEPAD  ////////
+//Edit box for the Notepad
+.panel--edit-box {
+    height: 250px; 
+    overflow: scroll;
+    padding: 4px;
+    margin-block-start: 0px;
+    margin-block-end: 4px;
+    font-family: $font-body;
+    border-radius: 2px;
+    box-shadow: 0 0 0 2px rgba(112, 111, 111, 0.1);
+    font-size: 14px;
+    background-color: transparent;
+    border: 0px;
+    resize: none;
+    color: whitesmoke;
+
+    li:before {
+        content: url('../../../images/screenshot_paw_12.png');
+        width: 12px;
+        height: 12px;
+        padding-right: 4px;
+    }
+
+    h3 {
+        margin-block-start: 0.5em;
+        margin-block-end: 0.3em;
+        color: $gray;
+    }
+
+    ul {
+        margin-block-start: 0.3em;
+        margin-block-end: 0.4em; 
+    }
+
+    &:focus{
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0 0 0 2px $gray;
+        outline: none;
+        transition: all .1s ease;
+    }
+
+    b {
+        font-weight: 800;
+    }
+}
+
+//Notepad Menu - Header, List, Bold, Italic, Underline
+.edit-box--menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-block-start: 0px;
+    margin-block-end: 8px;
+// .fa-heading, .fa-list-ul, .fa-bold, .fa-italic, .fa-underline
+
+    button {
+        margin-block-start: 0px;
+        margin-block-end: 4px;
+        font-size: 14px;
+        background-color: $white-opacity-5;
+        color: whitesmoke;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 6px 12px;
+        width: 100%;
+        margin: 0px 4px;
+        text-align: center;
+        border: 0px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &:hover {
+            background-color: $gradient-blue;
+        }
+    }
+}
+
+
+//Notepad Edit box clear button
+.edit-box--button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+    background-color: $white-opacity-5;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+
+    p {
+        margin-block-start: 6px;
+        margin-block-end: 6px;
+        margin-left: 5px;
+        font-size: 14px;
+        pointer-events: none;
+    }
+
+    &:hover {
+        background-color: $gradient-blue;
+    }
+
+    &:active {
+        background-color: $gradient-pink;
+    }
+}
+
+.edit-box--button-active {
+    background-color: $gradient-blue;
+}
+
+//Accordion button/tabs when Active and Hover
+.active, .accordion-btn:hover {
+    background: $gradient-primary;
+ 
+    
+    p, .fa-question, .fa-stopwatch, .fa-bolt, .fa-sticky-note, .fa-save {
+        color: $dark-gray;
+        font-weight: 600px;
+    }
+}
+
+.fa-question, .fa-stopwatch, .fa-bolt, .fa-sticky-note, .fa-save {
+    color: $gradient-blue;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
+}

@@ -1,0 +1,34 @@
+@import "../core/color";
+
+
+.sm-info {
+    font-size: 14px;
+    color: $gray;
+}
+
+.sm-info-12 {
+    font-size: 12px;
+    color: $gray;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.max-ch-60 {
+    width: 62ch;
+    line-height: 1.4;
+}
+
+#nonfunctional {
+    opacity: 0.4;
+    cursor: auto;
+}
+
+.gray-text{
+    color: $gray;
+
+    .fa-edit:hover {
+        color: whitesmoke;
+    }
+}
